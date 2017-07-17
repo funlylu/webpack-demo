@@ -1,0 +1,156 @@
+/*header*/
+
+.info {
+    height: 30px;
+    background: #F9F9F9;
+}
+
+.info ul {
+    float: right;
+    padding-right: 110px;
+}
+
+.info ul li {
+    box-sizing: border-box;
+    margin-top: 10px;
+    float: left;
+}
+
+.info ul li a {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 13px;
+    color: #999;
+    cursor: pointer;
+}
+
+.info ul li a:hover {
+    color: #333;
+}
+
+
+/*end of info*/
+
+.search,
+.nav-list {
+    width: 1085px;
+    margin: 0 auto;
+}
+
+.search {
+    padding-top: 30px;
+    padding-bottom: 15px;
+}
+
+.search .find-box,
+.search .login {
+    display: inline-block;
+}
+
+.find-box form::before {
+    float: left;
+    content: "一点资讯";
+    font-size: 29px;
+    font-weight: bold;
+    line-height: 36px;
+    color: #129aee;
+    margin-right: 20px;
+}
+
+.find-box form input[type="text"] {
+    height: 34px;
+    width: 418px;
+    border: 1px solid #ccc;
+}
+
+.find-box form input[type="submit"] {
+    height: 36px;
+    width: 90px;
+    background: #129aee;
+    color: #fff;
+    font-size: 16px;
+    border: 0;
+    margin-left: 17px;
+    margin-right: 136px;
+    font-weight: bold;
+}
+
+.search .login a {
+    font-size: 15px;
+    color: #129aee;
+    padding: 0 15px;
+}
+
+.split-border {
+    border-right: 1px solid #ccc;
+}
+
+a.btn {
+    display: inline-block;
+    border: 1px solid #129aee;
+    height: 25px;
+    width: 60px;
+    margin-left: 15px;
+    line-height: 25px;
+    text-align: center;
+}
+
+a.btn:hover {
+    color: #fff;
+    background: #129aee;
+}
+
+a.active {
+    color: #129aee;
+    border-bottom: 2px solid #129aee;
+}
+
+.nav-list ul li {
+    float: left;
+    height: 52px;
+    width: 83px;
+    text-align: center;
+    line-height: 52px;
+}
+
+.nav-list ul li a {
+    color: #222;
+    font-size: 16px;
+}
+
+.nav-list ul li a:hover {
+    color: #129aee;
+}
+
+.fixed {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    height: 53px;
+    border-bottom: 1px solid #ccc;
+    z-index: 999;
+    background-color: #fff;
+}
+
+.fixed .nav-list ul li {
+    height: 50px;
+    width: 64px;
+}
+.login-right {
+    float: left;
+}
+
+.login-right {
+    width: 230px;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+}
+
+.login-right a {
+    font-size: 14px;
+    color: #129aee;
+}
+body{
+    /* font-size: 80px; */
+}

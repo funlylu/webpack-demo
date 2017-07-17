@@ -1,0 +1,93 @@
+/*重置浏览器样式*/
+html,body,h1,h2,h3,h4,h5,h6,div,dl,
+dt,dd,ul,ol,li,p,blockquote,pre,hr,
+figure,table,caption,th,td,form,fieldset,
+legend,input,button,textarea,menu{
+	margin:0;
+	padding:0;
+}
+
+header,footer,section,article,aside,
+nav,hgroup,address,figure,figcaption,
+menu,details{
+	display:block;
+}
+
+table{
+	border-collapse:collapse;
+	border-spacing:0;
+}
+body{
+	background:#fff;
+}
+body,textarea,input,button,select,keygen,legend{
+	font: 16px/24px Microsoft YaHei,Arial,\\5B8B\4F53,Arial Narrow;
+	/* color:#333; */
+	outline:0;
+}
+a,a:hover{
+	color:#333;
+}
+li{
+	list-style:none;
+}
+
+/*不常用*/
+caption,th{
+	text-align:left;
+	font-weight:normal;
+}
+html,body,fieldset,img,iframe,abbr{
+	border:0;
+}
+a,button{
+	cursor:pointer;
+}
+h1,h2,h3,h4,h5,h6,em,strong,b{
+	font-weight:bold;
+}
+del,ins,u,s,a,a:hover{
+	text-decoration:none;
+}
+i,cite,em,var,address,dfn{
+	font-style:normal;
+}
+[hidefocus],summary{
+	outline:0;
+}
+h1,h2,h3,h4,h5,h6,small{
+	font-size:100%;
+}
+sup,sub{
+	font-size:83%;
+}
+pre,code,kbd,samp{
+	font-family:inherit;
+}
+q:before,q:after{
+	content:none;
+}
+textarea{
+	overflow:auto;
+	resize:none;
+}
+label,summary{
+	cursor:default;
+}
+/*不常用*/
+
+
+/* Clear float */
+/*给IE6识别的清楚浮动的，出发haslayout；感觉有点古老*/
+.clearfix {
+    *zoom: 1;
+}
+/* .clearfix::before, */
+.clearfix::after {
+    display: table;
+    line-height: 0;
+    content: "";
+}
+.clearfix::after {
+    clear: both;
+}
