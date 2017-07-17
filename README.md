@@ -18,7 +18,7 @@ npm run build
 npm run start
 ```
 
-查看demo示例页面：http://127.0.0.1:9000/
+查看demo示例页面：http://127.0.0.1:9000/assets/
 
 
 
