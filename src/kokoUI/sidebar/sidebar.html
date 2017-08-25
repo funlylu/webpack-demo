@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sidebar</title>
+    <link rel="stylesheet" href="../lib/normalize.css">
+    <style>
+    .ko-sidebar {
+        display: block;
+    }
+
+    .ko-sidebar .bar-title {
+        display: block;
+    }
+
+    .ko-sidebar .bar-list {
+        display: none;
+    }
+
+    .ko-sidebar .bar-li {
+        list-style-type: none;
+    }
+
+    .ko-sidebar .bar-title.active+.bar-list {
+        display: block;
+    }
+    /* page */
+    /* Clear float */
+
+    .clearfix {
+        *zoom: 1;
+        /*给IE7以下版本识别的清楚浮动的（因为它们不识别after 这个伪类），这些版本的IE触发haslayout便可以清除浮动*/
+    }
+
+    .clearfix:before,
+    .clearfix:after {
+        display: table;
+        line-height: 0;
+        content: "";
+        /*必要*/
+        /* .clearfix:before 是为了防止当前元素和上外边距和它上面的上外边距的 
+    叠加这里我们称为空白崩溃如果没有这个需求不加也是可以的。*/
+    }
+
+    .clearfix::after {
+        clear: both;
+        /*必要*/
+    }
+    /* 另外：触发父级元素的BFC 来清除浮动,下面的属性都可以触发父级元素的BFC*/
+
+    html,
+    body {
+        height: 100%;
+    }
+
+    .container {
+        height: 95%;
+    }
+
+    .nav {
+        height: 5%;
+        background-color: #000;
+    }
+
+    .sidebar {
+        float: left;
+        width: 20%;
+        height: 100%;
+        min-width: 200px;
+        background-color: greenyellow;
+    }
+
+    .main-form {
+        float: left;
+        text-align: center;
+        height: 100%;
+        width: 80%;
+        background-color: red;
+    }
+
+    #form {
+        height: 200px;
+        width: 100%;
+        margin-top: 20px;
+        background-color: pink;
+    }
+    </style>
+</head>
+
+<body>
+    <header class="nav"></header>
+    <div class="container clearfix">
+        <div class="sidebar">
+            <div class="ko-sidebar">
+                <a href="javascript:;" class="bar-title active">设备状态</a>
+                <ul class="bar-list">
+                    <li class="bar-li">网络</li>
+                    <li class="bar-li">系统时间</li>
+                    <li class="bar-li">版本信息</li>
+                </ul>
+                <a href="javascript:;" class="bar-title">系统管理</a>
+                <ul class="bar-list">
+                    <li class="bar-li">网络配置</li>
+                    <li class="bar-li">密码管理</li>
+                </ul>
+                <a href="javascript:;" class="bar-title">系统维护</a>
+                <ul class="bar-list">
+                    <li class="bar-li">升级</li>
+                    <li class="bar-li">配置备份</li>
+                    <li class="bar-li">重启</li>
+                    <li class="bar-li">恢复出厂</li>
+                </ul>
+            </div>
+        </div>
+        <div class="main-form">
+            <form id="form">
+            </form>
+            <button class="btn btn-search">查询</button>
+            <button class="btn btn-set">设置</button>
+        </div>
+    </div>
+    <script src="../lib/jquery.min.js"></script>
+    <script src="../lib/jquery.oLoader.min.js"></script>
+    <script>
+    jQuery(document).ready(function($) {
+        $.oPageLoader();
+        $(".btn-set").on('click', function(event) {
+            event.preventDefault();
+            /* Act on the event */
+            $('#form').oLoader({
+                url: 'system-status.html'
+            });
+        });
+    });
+    </script>
+</body>
+
+</html>
