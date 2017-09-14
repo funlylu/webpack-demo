@@ -44,7 +44,7 @@ module.exports = {
     },
     resolve: { //为各个js模块组件定义别名，方便在入口文件中require引用 
         alias: {//这里设置的路径一定得是绝对路径,不然打包时找不到模块
-           // jquery: srcDir + "/common/jquery.min.js", 
+            jquery: srcDir + "/common/jquery.min.js", 
             ui: srcDir + "/app/ui",
             html:srcDir + "/src/html"
         }
